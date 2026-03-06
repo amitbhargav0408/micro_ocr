@@ -3,18 +3,17 @@ name = "micro_ocr"
 authors = [
     { name = "amit bhargav", email = "amit.bhargav@microcrispr.com"}
 ]
-description = "This ERPNext app is designed to streamline resume data extraction and management. It leverages advanced OCR and NLP techniques to automatically parse resumes, identify key information, and store it in structured formats within ERPNext. The app reduces manual effort, improves accuracy, and ensures that HR teams can quickly access candidate details for recruitment workflows."
+description = "OCR app"
 requires-python = ">=3.10"
 readme = "README.md"
 dynamic = ["version"]
-dependencies = [
-    # "frappe~=15.0.0" # Installed and managed by bench.
-]
 
 [build-system]
-requires = ["flit_core >=3.4,<4"]
-build-backend = "flit_core.buildapi"
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
 
+[tool.setuptools.packages.find]
+where = ["."]
 # These dependencies are only installed when developer mode is enabled
 [tool.bench.dev-dependencies]
 # package_name = "~=1.1.0"
